@@ -13,10 +13,7 @@ import {
   faCss3Alt,
   faNode,
   faReact,
-  faServer,
-  faCode,
   faPython,
-  faFlask,
   faPhp,
   faLaravel,
   faGithub, 
@@ -46,20 +43,20 @@ const projects = [
     image: HayPoli,
     githubLink: 'https://github.com/Karlen-yan/hay-poli',
     onlineLink: 'https://hay-poli-frontend.onrender.com/',
-    technologies: [faJs, faVuejs, faCss3Alt, faNode, faServer],
+    technologies: [faJs, faVuejs, faCss3Alt, faNode],
     description:" Proyecto de Tienda de Ropa: Creado como ejemplo final para un ciclo profesional de grado superior."
     
   },
   {
     image: Construction,
-    technologies: [faPython, faFlask, faJs, faCss3Alt],
+    technologies: [faPython, faJs, faCss3Alt],
     githubLink: 'https://github.com/Karlen-yan/Construction-APP-', 
     description:" Proyecto de Construcción: Un ejemplo de una aplicación que realiza cálculos y permite a los usuarios crear presupuestos para estimar el costo de nuestros servicios."
     
   },
   {
     image: ProjectTelesfor,
-    technologies: [faPython, faFlask, faJs, faCss3Alt],
+    technologies: [faPython, faJs, faCss3Alt],
     githubLink: 'https://github.com/Karlen-yan/CAI_DAW',
     onlineLink: 'http://telesfor.pythonanywhere.com/',
     description:"Proyecto de Cuidados de Enfermería: Nuestro objetivo era ayudar a los estudiantes de Cuidados Auxiliares de Enfermería a tener una experiencia más cercana a su futuro entorno laboral.",
@@ -72,7 +69,7 @@ const projects = [
   },
   {
     image: CvKarlen,
-    technologies: [faReact, faCode, faJs, faCss3Alt],
+    technologies: [faReact, faJs, faCss3Alt],
     githubLink: 'https://github.com/Karlen-yan/KarlenCV__',
     description:"Proyecto de CV Digital: Creado con la finalidad de tener un currículum en línea interactivo y dinámico. Este proyecto permite a los usuarios descargar su CV tal como se ve en la pantalla. Además, todas las páginas están disponibles en inglés y español para alcanzar a un público más amplio. El objetivo principal es proporcionar una plataforma donde pueda completarse la descripción e información personal. A través de este proyecto, también se busca practicar nuevas tecnologías, como en este caso, Next.js, para adquirir conocimientos en el desarrollo web moderno."
   },

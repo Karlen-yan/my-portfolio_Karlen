@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/legacy/image";
-import { 
-  FontAwesomeIcon
-} from "@fortawesome/react-fontawesome";
-import { 
-  faGlobe,
-  faInfo
-} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faInfo } from "@fortawesome/free-solid-svg-icons";
 import {
   faJs,
   faVuejs,
@@ -16,8 +11,8 @@ import {
   faPython,
   faPhp,
   faLaravel,
-  faGithub, 
-} from "@fortawesome/free-brands-svg-icons"; 
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 import HayPoli from "../images/hay-poli.png";
 import Construction from "../images/construction1.png";
 import ProjectTelesfor from "../images/projecte-telesfor.png";
@@ -31,56 +26,55 @@ const images = [
   ProjectTelesfor,
   Cobeer,
   CvKarlen,
-  LaravelReact,
-  
+  LaravelReact
 ];
-
-const imageWidth = 600;
-const imageHeight = 400;
 
 const projects = [
   {
     image: HayPoli,
-    githubLink: 'https://github.com/Karlen-yan/hay-poli',
-    onlineLink: 'https://hay-poli-frontend.onrender.com/',
+    githubLink: "https://github.com/Karlen-yan/hay-poli",
+    onlineLink: "https://hay-poli-frontend.onrender.com/",
     technologies: [faJs, faVuejs, faCss3Alt, faNode],
-    description:" Proyecto de Tienda de Ropa: Creado como ejemplo final para un ciclo profesional de grado superior."
-    
+    description:
+      "Clothing Store Project: Created as a final example for a higher degree professional cycle."
   },
   {
     image: Construction,
     technologies: [faPython, faJs, faCss3Alt],
-    githubLink: 'https://github.com/Karlen-yan/Construction-APP-', 
-    description:" Proyecto de Construcción: Un ejemplo de una aplicación que realiza cálculos y permite a los usuarios crear presupuestos para estimar el costo de nuestros servicios."
-    
+    githubLink: "https://github.com/Karlen-yan/Construction-APP-",
+    description:
+      "Construction Project: An example of an application that performs calculations and allows users to create budgets to estimate the cost of our services."
   },
   {
     image: ProjectTelesfor,
     technologies: [faPython, faJs, faCss3Alt],
-    githubLink: 'https://github.com/Karlen-yan/CAI_DAW',
-    onlineLink: 'http://telesfor.pythonanywhere.com/',
-    description:"Proyecto de Cuidados de Enfermería: Nuestro objetivo era ayudar a los estudiantes de Cuidados Auxiliares de Enfermería a tener una experiencia más cercana a su futuro entorno laboral.",
+    githubLink: "https://github.com/Karlen-yan/CAI_DAW",
+    onlineLink: "http://telesfor.pythonanywhere.com/",
+    description:
+      "Nursing Care Project: Our goal was to help Auxiliary Nursing Care students have a closer experience to their future work environment."
   },
   {
     image: Cobeer,
-    technologies: [faPhp, faCss3Alt, faJs],
+    technologies: [faPhp, faCss3Alt, faJs]
     // githubLink: '',
     // description:"",
   },
   {
     image: CvKarlen,
     technologies: [faReact, faJs, faCss3Alt],
-    githubLink: 'https://github.com/Karlen-yan/KarlenCV__',
-    description:"Proyecto de CV Digital: Creado con la finalidad de tener un currículum en línea interactivo y dinámico. Este proyecto permite a los usuarios descargar su CV tal como se ve en la pantalla. Además, todas las páginas están disponibles en inglés y español para alcanzar a un público más amplio. El objetivo principal es proporcionar una plataforma donde pueda completarse la descripción e información personal. A través de este proyecto, también se busca practicar nuevas tecnologías, como en este caso, Next.js, para adquirir conocimientos en el desarrollo web moderno."
+    githubLink: "https://github.com/Karlen-yan/KarlenCV__",
+    description:
+      "Digital CV Project: Created with the purpose of having an interactive and dynamic online curriculum vitae. This project allows users to download their CV as it appears on the screen. Additionally, all pages are available in both English and Spanish to reach a broader audience. The main objective is to provide a platform where the description and personal information can be completed. Through this project, the aim is also to practice new technologies, such as Next.js in this case, to gain knowledge in modern web development."
   },
   {
     image: LaravelReact,
     technologies: [faPhp, faLaravel, faCss3Alt],
-    githubLink: 'https://github.com/Karlen-yan/laravel-react-full-stack',
-    infoLink: '#project6-info',
-    description:"Proyecto de Práctica: Desarrollado con el propósito de ganar experiencia en el uso conjunto de Laravel y React.js. Este proyecto se enfoca en la creación de un sistema CRUD (Crear, Leer, Actualizar, Eliminar) de usuarios. Incluye un formulario de registro y otro para iniciar sesión, los cuales permiten a los usuarios acceder a un panel de control (dashboard) donde pueden gestionar la información de usuarios, incluyendo agregar, modificar o eliminar registros. El objetivo principal de este proyecto es adquirir conocimientos prácticos en la integración de Laravel y React.js, dos tecnologías populares en el desarrollo web moderno."
+    githubLink: "https://github.com/Karlen-yan/laravel-react-full-stack",
+    infoLink: "#project6-info",
+    description:
+      "Practice Project: Developed with the purpose of gaining experience in using Laravel and React.js together. This project focuses on creating a CRUD (Create, Read, Update, Delete) system for users. It includes a registration form and a login form, which allow users to access a dashboard where they can manage user information, including adding, modifying, or deleting records. The main objective of this project is to acquire practical knowledge in integrating Laravel and React.js, two popular technologies in modern web development."
   }
-]
+];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -123,33 +117,47 @@ const Carousel = () => {
               <div className="flex flex-col items-center pt-8 pb-8">
                 <Image
                   src={project.image}
-                  alt=""
-                  width={imageWidth}
-                  height={imageHeight}
+                  alt="Imagenes de Proyectos Creados"
+                  style={{ width: "100%", height: "auto" }}
                   className="rounded-lg object-cover"
                 />
-           <div className="flex justify-center mt-12">
-            {project.githubLink && 
-              <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} size="xl" className="mx-6" />
-              </a>
-              }
-              {project.onlineLink &&
-              <a href={project.onlineLink} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGlobe} size="xl" className="mx-6" />
-              </a>
-              }
-              {project.description &&
-              <div className="relative  inline-block group">
-                <FontAwesomeIcon icon={faInfo} size="xl" className="mx-6 group-hover:text-blue-500 cursor-pointer transition duration-300 ease-in-out"
-        />
-           <div className="tooltip dark:bg-teal-500  dark:text-white">
-        {project.description}
-      </div>
-              </div>
-              }
-      
-          </div>
+                <div className="flex justify-center mt-12">
+                  {project.githubLink &&
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faGithub}
+                        size="xl"
+                        className="mx-6"
+                      />
+                    </a>}
+                  {project.onlineLink &&
+                    <a
+                      href={project.onlineLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faGlobe}
+                        size="xl"
+                        className="mx-6"
+                      />
+                    </a>}
+                  {project.description &&
+                    <div className="relative  inline-block group">
+                      <FontAwesomeIcon
+                        icon={faInfo}
+                        size="xl"
+                        className="mx-6 group-hover:text-blue-500 cursor-pointer transition duration-300 ease-in-out"
+                      />
+                      <div className="tooltip bg-gray-900 text-white dark:bg-teal-500  dark:text-white">
+                        {project.description}
+                      </div>
+                    </div>}
+                </div>
               </div>
             </div>
           )}

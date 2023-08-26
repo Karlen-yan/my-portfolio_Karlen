@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import IconComponent from "../components/IconComponent";
 import Carousel from "../components/Carousel";
 import { useState, useEffect } from "react";

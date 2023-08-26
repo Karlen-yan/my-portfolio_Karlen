@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import IconWeb from "../images/web_icon.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function servisios() {
 

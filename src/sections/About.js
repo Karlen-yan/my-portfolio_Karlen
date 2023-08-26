@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import IconComponent from "../components/IconComponent";
 import ImgKarlen from "../images/karlenAbout.png";
 

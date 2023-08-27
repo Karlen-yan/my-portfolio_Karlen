@@ -33,7 +33,7 @@ const projects = [
   {
     image: HayPoli,
     githubLink: "https://github.com/Karlen-yan/hay-poli",
-    onlineLink: "https://hay-poli-frontend.onrender.com/",
+    onlineLink: "https://hay-poli.vercel.app/",
     technologies: [faJs, faVuejs, faCss3Alt, faNode],
     description:
       "Clothing Store Project: Created as a final example for a higher degree professional cycle."

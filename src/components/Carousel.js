@@ -131,7 +131,7 @@ const Carousel = () => {
                       <FontAwesomeIcon
                         icon={faGithub}
                         size="xl"
-                        className="mx-6"
+                        className="mx-6 hover:text-teal-500"
                       />
                     </a>}
                   {project.onlineLink &&
@@ -143,7 +143,7 @@ const Carousel = () => {
                       <FontAwesomeIcon
                         icon={faGlobe}
                         size="xl"
-                        className="mx-6"
+                        className="mx-6 hover:text-teal-500" 
                       />
                     </a>}
                   {project.description &&
@@ -151,7 +151,7 @@ const Carousel = () => {
                       <FontAwesomeIcon
                         icon={faInfo}
                         size="xl"
-                        className="mx-6 group-hover:text-blue-500 cursor-pointer transition duration-300 ease-in-out"
+                        className="mx-6 hover:text-teal-500 cursor-pointer transition duration-300 ease-in-out"
                       />
                       <div className="tooltip bg-gray-900 text-white dark:bg-teal-500  dark:text-white">
                         {project.description}

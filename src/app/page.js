@@ -9,6 +9,8 @@ import IconWeb from "../images/web_icon.png";
 import IconBack from "../images/icon_back.png";
 import IconDb from "../images/db.png";
 import { sendContactForm } from "../../lib/api";
+import Menu from "../components/Menu";
+
 import {
   Container,
   FormControl,
@@ -31,7 +33,6 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  const toast = useToast();
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
 
@@ -55,7 +56,7 @@ export default function Home() {
       if (showSuccessMessage) {
         setTimeout(() => {
           setShowSuccessMessage(false);
-        }, 5000); // Oculta el mensaje después de 5 segundos
+        }, 5000); 
       }
     }, [showSuccessMessage]);
   
@@ -84,7 +85,8 @@ export default function Home() {
   }
   return (
     <main className="bg-gray-100 p-4 md:px-20 lg:px-40 dark:bg-gray-900">
-      <section className="mb-12  flex flex-col items-center  min-h-screen ">
+      <Menu />
+      <section className="mb-12  flex flex-col items-center  min-h-screen " id="home">
         <div className="text-center mt-12">
           <h4 className="text-gray-600 py-1 md:text-2xl dark:text-white">
             Hello, I&apos;m
@@ -124,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <div data-aos="fade-up" data-aos-duration="3000">
+      <div data-aos="fade-up" data-aos-duration="3000" id="about">
         <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
           Get To Know
         </h1>
@@ -193,7 +195,7 @@ export default function Home() {
 
       {/* Services */}
       {/* <Services /> */}
-      <div data-aos="fade-up" data-aos-duration="3000">
+      <div data-aos="fade-up" data-aos-duration="3000" id="services">
         <section className="text-center mb-12  flex flex-col items-center  min-h-screen">
           <div>
             <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
@@ -269,7 +271,7 @@ export default function Home() {
       {/* project  */}
       {/* <Projects /> */}
 
-      <div data-aos="fade-up" data-aos-duration="3000">
+      <div data-aos="fade-up" data-aos-duration="3000" id="projects">
         <div>
           <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
             My Recent Work
@@ -283,7 +285,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="3000">
+
+      {/* contact */}
+      <div data-aos="fade-up" data-aos-duration="3000" id="contact">
         <section>
           <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
             Get In Touch

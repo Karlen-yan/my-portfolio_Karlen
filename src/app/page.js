@@ -10,6 +10,7 @@ import IconBack from "../images/icon_back.png";
 import IconDb from "../images/db.png";
 import { sendContactForm } from "../../lib/api";
 import Menu from "../components/Menu";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -28,6 +29,8 @@ const formInputStyles =
 export default function Home() {
   const initState = { isLoading: false, error: "", values: initValues };
   const [mounted, setMounted] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     setMounted(true);
@@ -50,16 +53,18 @@ export default function Home() {
       }
     }));
 
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-    useEffect(() => {
+  useEffect(
+    () => {
       if (showSuccessMessage) {
         setTimeout(() => {
           setShowSuccessMessage(false);
-        }, 5000); 
+        }, 5000);
       }
-    }, [showSuccessMessage]);
-  
+    },
+    [showSuccessMessage]
+  );
 
   const onSubmit = async () => {
     setState(prev => ({
@@ -71,7 +76,6 @@ export default function Home() {
       setTouched({});
       setState(initState);
       setShowSuccessMessage(true);
-
     } catch (error) {
       setState(prev => ({
         ...prev,
@@ -80,22 +84,32 @@ export default function Home() {
       }));
     }
   };
+
+  const translations = t("webDevelopmentDesc", { returnObjects: true });
+  const translations1 = t('interactiveAppDesc', { returnObjects: true });
+  const translations2 = t('backendDesc', { returnObjects: true });
+  const translations3 = t('dbDesc', { returnObjects: true });
+
+
   if (!mounted) {
     return null;
   }
   return (
     <main className="bg-gray-100 p-4 md:px-20 lg:px-40 dark:bg-gray-900">
       <Menu />
-      <section className="mb-12  flex flex-col items-center  min-h-screen " id="home">
+      <section
+        className="mb-12  flex flex-col items-center  min-h-screen "
+        id="home"
+      >
         <div className="text-center mt-12">
           <h4 className="text-gray-600 py-1 md:text-2xl dark:text-white">
-            Hello, I&apos;m
+            {t("hello")}
           </h4>
           <h1 className="text-3xl font-bold font-burtons py-3 text-teal-500 md:text-5xl">
-            Karlen Hakobyan
+            {t("name")}
           </h1>
           <h5 className="text-gray-600 py-1 md:text-2xl dark:text-white">
-            Web Developer
+            {t("profession")}
           </h5>
         </div>
         <div className="flex flex-row justify-center gap-8 py-6 text-green-60">
@@ -128,10 +142,10 @@ export default function Home() {
       {/* About */}
       <div data-aos="fade-up" data-aos-duration="3000" id="about">
         <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
-          Get To Know
+          {t("getToKnow")}
         </h1>
         <h1 className="text-center text-teal-500 py-1 md:text-4xl dark:text-teal-500 pb-12">
-          About Me
+          {t("aboutMe")}
         </h1>
         <section className="grid grid-cols-1 md:grid-cols-2">
           <div className="bg-gradient-to-b from-teal-500 rounded-md w-80 h-96">
@@ -149,45 +163,33 @@ export default function Home() {
               <div className="text-center rounded-md p-4 bg-gradient-to-b from-teal-500">
                 <IconComponent name="briefcase" />
                 <h2 className="text-gray-900 dark:text-white text-lg">
-                  Experience
+                  {t("experience")}
                 </h2>
                 <p className="text-teal-900 dark:text-teal-500 text-sm">
-                  2 Years
+                  {t("experienceYears")}
                 </p>
               </div>
               <div className="text-center rounded-md p-4 bg-gradient-to-b from-teal-500">
                 <IconComponent name="user" />
                 <h2 className="text-gray-900 dark:text-white text-lg mt-2">
-                  Clients
+                  {t("clients")}
                 </h2>
                 <p className="text-teal-900 dark:text-teal-500 text-sm">
-                  2+ Completed
+                  {t("clientsCompleted")}
                 </p>
               </div>
               <div className="text-center rounded-md p-4 bg-gradient-to-b from-teal-500">
                 <IconComponent name="projectDiagram" />
                 <h2 className="text-gray-900 dark:text-white text-lg mt-2">
-                  Projects
+                  {t("projects")}
                 </h2>
                 <p className="text-teal-900 dark:text-teal-500 text-sm">
-                  20+ Completed
+                  {t("projectsCompleted")}
                 </p>
               </div>
             </div>
             <p className="text-md mt-4">
-              I&apos;m Karlen, a passionate web developer. With over two years
-              of experience in full-stack development, I specialize in
-              JavaScript, PHP, Python, and Java. Proficient in MERN and MEVN
-              stacks, and experienced in implementing the Model-View-Controller
-              pattern in Node.js and PHP. I also develop REST APIs and have
-              strong knowledge of both Linux and Windows operating systems.
-              I&apos;ve worked on web projects with diverse clients, utilizing
-              HTML5, CSS3, Bootstrap5, XML, XSD, RSS, and JQuery. Extensive
-              experience with databases like MongoDB, MySQL, and PostgreSQL.
-              I&apos;m a multilingual communicator, fluent in Armenian, advanced
-              in Spanish, intermediate in Russian and English, and basic in
-              Catalan. My focus is on continuous learning in web development to
-              become a senior full-stack developer.
+              {t("aboutText")}
             </p>
           </div>
         </section>
@@ -199,22 +201,25 @@ export default function Home() {
         <section className="text-center mb-12  flex flex-col items-center  min-h-screen">
           <div>
             <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
-              What I offer
+              {t("whatIOffer")}
             </h1>
             <h1 className=" text-teal-500 py-1 md:text-4xl dark:text-teal-500 pb-12">
-              Services
+              {t("services")}
             </h1>
             <p className="text-md py-2 leading-8">
-              Design and Development of Attractive Websites.
+              {t("webDevelopment")}
             </p>
             <p className="w-2/3 m-auto text-md py-2 leading-8 text-gray-80">
-              I create modern and appealing websites using
-              <span className="text-teal-500 p-2">HTML5, CSS3</span> and
-              frameworks like
-              <span className="text-teal-500 p-2">Bootstrap, Sass</span>, and{" "}
-              <span className="text-teal-500">TailwindCSS</span>. My goal is to
-              ensure that your site is not only visually pleasing, but also
-              intuitive for users.
+              {translations.text}
+              <span className="text-teal-500 p-2">
+                {translations.span1}
+              </span>
+                {translations.span2}
+             
+              <span className="text-teal-500 p-2">{translations.span3}</span>
+              {translations.span4}
+               <span className="text-teal-500">{translations.span5}</span>
+              {translations.rest}
             </p>
           </div>
 
@@ -222,17 +227,16 @@ export default function Home() {
             <div className=" flex flex-col justify-center items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100 dark:text-black">
               <Image src={IconWeb} width={100} height={100} alt="web icon" />
               <p className="text-md py-2 leading-8  font-bold">
-                Interactive Web Application Development
+                {t("frontendDevelopment")}
               </p>
               <p className="text-md py-2 leading-8 text-gray-80">
-                I use technologies like
-                <span className="text-teal-500 p-2">JavaScript</span> and
-                frameworks like{" "}
-                <span className="text-teal-500 p-2">VueJS and ReactJS</span> to
-                develop
-                <span className="text-teal-500 p-2">
-                  interactive and dynamic web applications
-                </span>that provide an exceptional user experience.
+              {translations1.text1}
+          <span className="text-teal-500 p-2">{translations1.span1}</span>
+          {translations1.text2}
+          <span className="text-teal-500 p-2">{translations1.span2}</span>
+          {translations1.text3}
+          <span className="text-teal-500 p-2">{translations1.span3}</span>
+          {translations1.rest}
               </p>
             </div>
 
@@ -241,28 +245,27 @@ export default function Home() {
                 <Image src={IconBack} width={100} height={100} alt="web icon" />
               </div>
               <p className="text-md py-2 leading-8  font-bold">
-                Robust Backend Development
-              </p>
+              {translations2.backendText}              </p>
               <p className="text-md py-2 leading-8 text-gray-80 pb-10">
-                I implement strong backend solutions using languages like
-                <span className="text-teal-500 p-2">
-                  PHP, Python, and Java
-                </span>. I apply the{" "}
-                <span className="text-teal-500 p-2">MVC</span> pattern to
-                structure projects in an organized and maintainable way.
+              {translations2.text1}
+          <span className="text-teal-500 p-2">{translations2.span1}</span>
+          {translations2.text2}
+          <span className="text-teal-500 p-2">{translations2.span2}</span>
+          {translations2.text3}
               </p>
             </div>
 
             <div className="flex flex-col justify-center items-center text-center dark:bg-gray-100 dark:text-black  shadow-lg p-10 rounded-xl my-10 ">
               <Image src={IconDb} width={100} height={100} alt="web icon" />
               <p className="text-md py-2 leading-8  font-bold">
-                Efficient Database Integration
+              {t("databaseIntegration")}
               </p>
               <p className="text-md py-2 leading-8 text-gray-80 pb-16">
-                <span className="text-teal-500 p-2">
-                  MongoDB, MySQL, SQL Server, and PostgreSQL
-                </span>, to manage and store data effectively, ensuring optimal
-                performance.
+              <span className="text-teal-500 p-2">{translations3.text1}</span>
+              {translations3.text2} 
+              {translations3.text3} 
+
+          {translations3.text4}
               </p>
             </div>
           </div>
@@ -285,15 +288,15 @@ export default function Home() {
         </div>
       </div>
 
-
       {/* contact */}
       <div data-aos="fade-up" data-aos-duration="3000" id="contact">
         <section>
           <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
-            Get In Touch
+          {t('contactForm.getInTouch')}
           </h1>
           <h1 className="text-center text-teal-500 py-1 md:text-4xl dark:text-teal-500 pb-12">
-            Contact Me
+          {t('contactForm.contactMe')}
+          
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-4 mb-12 lg:mx-20">
@@ -302,40 +305,43 @@ export default function Home() {
                 <IconComponent name="envelope" />
                 <h2 className="pt-1 text-white">Email</h2>
                 <p className="pt-1 text-gray-100">karlentkzar@gmail.com</p>
-                <p className="pt-1 text-teal-300"> Send a message</p>
+                <p className="pt-1 text-teal-300">  {t('contactForm.sendMessage')}</p>
               </div>
               <div className="flex flex-col justify-center items-center shadow-lg p-10 rounded-xl my-10 bg-teal-500 dark:bg-teal-500 lg:flex lg:flex-col ">
                 <IconComponent name="whatsapp" />
                 <h2 className="pt-1 text-white">WhatsApp</h2>
                 <p className="pt-1 text-gray-100">+34 632582005</p>
-                <p className="pt-1 text-teal-300">Send a message</p>
+                <p className="pt-1 text-teal-300"> {t('contactForm.sendMessage')}</p>
               </div>
             </div>
 
             <Container className="flex flex-col items-center mx-4 p-8 lg:mx-20">
-            {showSuccessMessage && (
-        <div
-        className="bg-green-100 border border-green-400 text-green-700 px-6 py- rounded relative w-80"
-        role="alert"
-      >
-        <strong className="font-bold">Message sent!</strong>
-        <span className="block sm:inline"> Your message has been successfully sent.</span>
-        <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
-          <svg
-            className="fill-current h-6 w-6 text-green-500"
-            role="button"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <title>Close</title>
-            <path
-              d="M14.348 5.652a1 1 0 010 1.414L9.414 10l4.934 4.934a1 1 0 11-1.414 1.414L8 11.414l-4.934 4.934a1 1 0 11-1.414-1.414L6.586 10 1.652 5.066a1 1 0 111.414-1.414L8 8.586l4.934-4.934a1 1 0 011.414 0z"
-              clipRule="evenodd"
-              fillRule="evenodd"
-            />
-          </svg>
-        </span>
-      </div>)}
+              {showSuccessMessage &&
+                <div
+                  className="bg-green-100 border border-green-400 text-green-700 px-6 py- rounded relative w-80"
+                  role="alert"
+                >
+                  <strong className="font-bold">{t('contactForm.messageSent')}</strong>
+                  <span className="block sm:inline">
+                  {t('contactForm.messageSentDescription')}
+                  </span>
+                  <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
+                    <svg
+                      className="fill-current h-6 w-6 text-green-500"
+                      role="button"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      >
+                      
+                      <title>{t('contactForm.contactFromClose')}</title>
+                      <path
+                        d="M14.348 5.652a1 1 0 010 1.414L9.414 10l4.934 4.934a1 1 0 11-1.414 1.414L8 11.414l-4.934 4.934a1 1 0 11-1.414-1.414L6.586 10 1.652 5.066a1 1 0 111.414-1.414L8 8.586l4.934-4.934a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </div>}
               {error &&
                 <Text className="text-red-500" my={4} fontSize="xl">
                   {error}
@@ -345,7 +351,9 @@ export default function Home() {
                 isInvalid={touched.name && !values.name}
                 mb={5}
               >
-                <FormErrorMessage>Required</FormErrorMessage>
+                <FormErrorMessage>
+                        {t('contactForm.required')}
+                  </FormErrorMessage>
                 <Input
                   className={formInputStyles}
                   type="text"
@@ -353,7 +361,7 @@ export default function Home() {
                   value={values.name}
                   onChange={handleChange}
                   onBlur={onBlur}
-                  placeholder="Your Full Name"
+                  placeholder={t('contactForm.fullName')}
                 />
               </FormControl>
               <FormControl
@@ -361,29 +369,33 @@ export default function Home() {
                 isInvalid={touched.email && !values.email}
                 mb={5}
               >
-                <FormErrorMessage>Required</FormErrorMessage>
+                   <FormErrorMessage>
+                        {t('contactForm.required')}
+                  </FormErrorMessage>
                 <Input
                   className={formInputStyles}
                   type="email"
                   name="email"
-                  placeholder="Your Email"
+                  placeholder={t('contactForm.email')}
                   value={values.email}
                   onChange={handleChange}
                   onBlur={onBlur}
                 />
               </FormControl>
-           
+
               <FormControl
                 mb={5}
                 isRequired
                 isInvalid={touched.subject && !values.subject}
-                >
-                <FormErrorMessage>Required</FormErrorMessage>
+              >
+                <FormErrorMessage>
+                        {t('contactForm.required')}
+                  </FormErrorMessage>
                 <Input
                   className={formInputStyles}
                   type="text"
                   name="subject"
-                  placeholder="Subject"
+                  placeholder={t('contactForm.subject')}
                   value={values.subject}
                   onChange={handleChange}
                   onBlur={onBlur}
@@ -393,13 +405,15 @@ export default function Home() {
                 isRequired
                 isInvalid={touched.message && !values.message}
                 mb={5}
-                >
-                <FormErrorMessage>Required</FormErrorMessage>
+              >
+                <FormErrorMessage>
+                        {t('contactForm.required')}
+                  </FormErrorMessage>
                 <Textarea
                   className={formInputStyles}
                   name="message"
                   rows={4}
-                  placeholder="Write your message here..."
+                  placeholder={t('contactForm.writeMessage')}
                   value={values.message}
                   onChange={handleChange}
                   onBlur={onBlur}
@@ -417,7 +431,7 @@ export default function Home() {
                 }
                 onClick={onSubmit}
               >
-                Send
+                {t('contactForm.send')}
               </Button>
             </Container>
           </div>

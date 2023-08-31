@@ -2,6 +2,9 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import IconComponent from "../components/IconComponent";
+import Language from '../components/LanguageSwitcher';
+import { useTranslation } from "react-i18next";
+
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -18,6 +21,7 @@ const ThemeSwitcher = () => {
       setFirstTimeUser(false); 
     }
   }, [firstTimeUser, setTheme]);
+  const { t } = useTranslation();
 
   if (!mounted) {
     return null;
@@ -26,7 +30,8 @@ const ThemeSwitcher = () => {
   return (
     <div className="bg-gray-100 p-4 md:px-20 lg:px-40 dark:bg-gray-900">
       <section className="flex flex-row items-center justify-between ">
-        <h3 className="text-lg">Full Stack Developer</h3>
+        <h3 className="text-lg"> {t('fullStackDeveloper')}</h3>
+<h3><Language /></h3>
         <ul className="flex flex-row items-center justify-between">
           {theme === "light" && (
             <button onClick={() => setTheme("dark")}>
@@ -42,7 +47,7 @@ const ThemeSwitcher = () => {
           <li>
             
             <a href="/karlen-cv.pdf" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" download="Karlen-cv.pdf">
-              Download CV
+            {t('downloadCV')}
             </a>
           </li>
         </ul>

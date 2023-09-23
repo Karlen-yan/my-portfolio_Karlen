@@ -272,7 +272,6 @@ export default function Home() {
         </section>
       </div>
       {/* project  */}
-      {/* <Projects /> */}
 
       <div data-aos="fade-up" data-aos-duration="3000" id="projects">
         <div>

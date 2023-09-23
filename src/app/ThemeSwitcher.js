@@ -46,7 +46,7 @@ const ThemeSwitcher = () => {
           )}
           <li>
             
-            <a href="/karlen-cv.pdf" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" download="Karlen-cv.pdf">
+            <a href="/Karlen-cv-FullStack.pdf" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" download="Karlen-cv.pdf">
             {t('downloadCV')}
             </a>
           </li>

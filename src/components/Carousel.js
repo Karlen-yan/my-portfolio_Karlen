@@ -17,7 +17,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 import HayPoli from "../images/hay-poli.png";
-import Construction from "../images/construction1.png";
+import Construction from "../images/app_construccion.png";
 import ProjectTelesfor from "../images/projecte-telesfor.png";
 import Cobeer from "../images/cobeer.png";
 import CvKarlen from "../images/cv-karlen.png";

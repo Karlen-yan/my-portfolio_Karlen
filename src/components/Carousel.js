@@ -11,15 +11,18 @@ import {
   faPython,
   faPhp,
   faLaravel,
-  faGithub
+  faGithub,
+  faWordpress,
+  
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 import HayPoli from "../images/hay-poli.png";
 import Construction from "../images/construction1.png";
 import ProjectTelesfor from "../images/projecte-telesfor.png";
 import Cobeer from "../images/cobeer.png";
 import CvKarlen from "../images/cv-karlen.png";
 import LaravelReact from "../images/laravel-react.png";
-import { useTranslation } from "react-i18next";
+import SirunikThemeWordpress from "../images/SirunikThemeWordpress.png";
 
 const images = [
   HayPoli,
@@ -27,7 +30,8 @@ const images = [
   ProjectTelesfor,
   Cobeer,
   CvKarlen,
-  LaravelReact
+  LaravelReact,
+  SirunikThemeWordpress
 ];
 
 
@@ -47,6 +51,14 @@ const Carousel = () => {
       githubLink: "https://github.com/Karlen-yan/Construction-APP-",
       description:
         "Construction Project: An example of an application that performs calculations and allows users to create budgets to estimate the cost of our services."
+    },
+    {
+      image: SirunikThemeWordpress,
+      technologies: [faJs, faCss3Alt,faWordpress,faPhp],
+      githubLink: "https://github.com/Karlen-yan/WordpressThemePHP",
+      onlineLink: "https://karlenam.000webhostapp.com/",
+      description:
+        "Custom WordPress Theme for Beauty Salon with Modern and Animated Design"
     },
     {
       image: ProjectTelesfor,

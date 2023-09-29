@@ -10,22 +10,24 @@ const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const [firstTimeUser, setFirstTimeUser] = useState(true); 
-  
   useEffect(() => {
     setMounted(true);
   }, []);
-
+  
   useEffect(() => {
     if (firstTimeUser) {
       setTheme("dark"); 
       setFirstTimeUser(false); 
     }
   }, [firstTimeUser, setTheme]);
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  
+  const downloadLink = `/Karlen-cv-FullStack_${i18n.language}.pdf`;
   if (!mounted) {
     return null;
   }
+  
+
 
   return (
     <div className="bg-gray-100 p-4 md:px-20 lg:px-40 dark:bg-gray-900">
@@ -46,7 +48,7 @@ const ThemeSwitcher = () => {
           )}
           <li>
             
-            <a href="/Karlen-cv-FullStack.pdf" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" download="Karlen-cv.pdf">
+            <a href={downloadLink} className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" download="Karlen-cv.pdf">
             {t('downloadCV')}
             </a>
           </li>

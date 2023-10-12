@@ -56,7 +56,7 @@ const Carousel = () => {
       image: SirunikThemeWordpress,
       technologies: [faJs, faCss3Alt,faWordpress,faPhp],
       githubLink: "https://github.com/Karlen-yan/WordpressThemePHP",
-      onlineLink: "https://karlenam.000webhostapp.com/",
+      onlineLink: "http://sirunik.wuaze.com/",
       description:
         "Custom WordPress Theme for Beauty Salon with Modern and Animated Design"
     },

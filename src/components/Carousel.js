@@ -50,7 +50,7 @@ const Carousel = () => {
       image: Car3DModel,
       technologies: [faReact, faCss3Alt],
       githubLink: "https://github.com/Karlen-yan/car-tree-d",
-      onlineLink: "https://vercel.com/karlen-yan/car-tree-gsap",
+      onlineLink: "https://car-tree-gsap.vercel.app/",
       description:
         "In this project a model of a car is used, using the ThreeJS library, the GSAP library is also used to add animation to the page."
     },

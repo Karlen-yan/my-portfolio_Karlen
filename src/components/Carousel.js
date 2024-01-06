@@ -31,7 +31,8 @@ const images = [
   Cobeer,
   CvKarlen,
   LaravelReact,
-  SirunikThemeWordpress
+  SirunikThemeWordpress,
+  Car3DModel
 ];
 
 

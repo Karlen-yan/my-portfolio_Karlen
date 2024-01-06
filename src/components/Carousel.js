@@ -23,7 +23,7 @@ import Cobeer from "../images/cobeer.png";
 import CvKarlen from "../images/cv-karlen.png";
 import LaravelReact from "../images/laravel-react.png";
 import SirunikThemeWordpress from "../images/SirunikThemeWordpress.png";
-
+import Car3DModel from "../images/car.png";
 const images = [
   HayPoli,
   Construction,
@@ -44,6 +44,14 @@ const Carousel = () => {
       technologies: [faJs, faVuejs, faCss3Alt, faNode],
       description:
       "Clothing Store Project: Created as a final example for a higher degree professional cycle."
+    },
+    {
+      image: Car3DModel,
+      technologies: [faReact, faCss3Alt],
+      githubLink: "https://github.com/Karlen-yan/car-tree-d",
+      onlineLink: "https://vercel.com/karlen-yan/car-tree-gsap",
+      description:
+        "In this project a model of a car is used, using the ThreeJS library, the GSAP library is also used to add animation to the page."
     },
     {
       image: Construction,

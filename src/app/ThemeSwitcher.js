@@ -47,8 +47,7 @@ const ThemeSwitcher = () => {
             </button>
           )}
           <li>
-            
-            <a href={downloadLink} className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" download="Karlen-cv.pdf">
+            <a href={downloadLink} className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 md:text-lg lg:text-xl" download="Karlen-cv.pdf">
             {t('downloadCV')}
             </a>
           </li>

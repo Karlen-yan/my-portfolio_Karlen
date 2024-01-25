@@ -19,7 +19,6 @@ import {
   FormErrorMessage,
   Textarea,
   Button,
-  useToast,
   Text
 } from "@chakra-ui/react";
 
@@ -194,9 +193,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-
       {/* Services */}
-      {/* <Services /> */}
       <div data-aos="fade-up" data-aos-duration="3000" id="services">
         <section className="text-center mb-12  flex flex-col items-center  min-h-screen">
           <div>
@@ -271,8 +268,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      {/* project  */}
-
+      {/* projects  */}
       <div data-aos="fade-up" data-aos-duration="3000" id="projects">
         <div>
           <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
@@ -282,11 +278,10 @@ export default function Home() {
             Portofolio
           </h1>
         </div>
-        <div className="flex flex-col items-center py-10">
+        <div className="flex flex-col items-center py-10 ">
           <Carousel />
         </div>
       </div>
-
       {/* contact */}
       <div data-aos="fade-up" data-aos-duration="3000" id="contact">
         <section>

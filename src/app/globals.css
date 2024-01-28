@@ -2,20 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* About me img  */
 .rotate-on-hover {
   transform: rotate(5deg);
-  transition: transform 0.5s ease-in-out; 
+  transition: transform 0.5s ease-in-out;
 }
-
 .rotate-on-hover:hover {
-  transform: rotate(0deg); 
+  transform: rotate(0deg);
 }
-
-
 /* Carusel */
-
 .tooltip {
   position: absolute;
   bottom: calc(100% + 20px);

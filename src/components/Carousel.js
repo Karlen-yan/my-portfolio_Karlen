@@ -121,7 +121,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className='flex justify-center -mt-3 p-5'>
+      <div className='flex justify-center -mt-12 p-5'>
         {projects.map((_, index) => (
           <FontAwesomeIcon
             key={index}

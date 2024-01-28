@@ -29,7 +29,8 @@ const ThemeSwitcher = () => {
   return (
     <div className='bg-gray-100 p-4 md:px-20 lg:px-40 dark:bg-gray-900'>
       <section className='flex flex-row items-center justify-between '>
-        <h3 className='text-lg'> {t('fullStackDeveloper')}</h3>
+        
+        <h3 className='text-sm lg:text-lg'> {t('fullStackDeveloper')}</h3>
         <h3>
           <Language />
         </h3>
@@ -48,7 +49,7 @@ const ThemeSwitcher = () => {
           <li>
             <a
               href={downloadLink}
-              className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 md:text-lg lg:text-xl'
+              className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 text-sm md:text-lg lg:text-xl'
               download='Karlen-cv.pdf'
             >
               {t('downloadCV')}

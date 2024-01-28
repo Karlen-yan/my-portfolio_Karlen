@@ -12,7 +12,7 @@ import {
   Button,
   Text
 } from "@chakra-ui/react";
-
+import ContainerPage from "./shared/container";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -26,7 +26,7 @@ const Contact = () => {
   }, []);
 
   const formInputStyles =
-  "m-6 p-4 w-full lg:w-96 bg-gray-100 rounded-xl dark:bg-gray-900 border border-solid border-teal-500 dark:border-teal-500 placeholder-teal-400 dark:placeholder-teal-800";
+  "m-6 p-4 w-[40vh] lg:w-96 bg-gray-100 rounded-xl dark:bg-gray-900 border border-solid border-teal-500 dark:border-teal-500 placeholder-teal-400 dark:placeholder-teal-800";
   
   const initValues = { name: "", email: "", subject: "", message: "" };
   
@@ -83,6 +83,7 @@ const Contact = () => {
     }
   return ( 
     <section data-aos="fade-up" data-aos-duration="3000" id="contact">
+   <ContainerPage>
     <div>
       <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
       {t('contactForm.getInTouch')}
@@ -229,6 +230,7 @@ const Contact = () => {
         </Container>
       </div>
     </div>
+    </ContainerPage>
   </section>
    );
 }

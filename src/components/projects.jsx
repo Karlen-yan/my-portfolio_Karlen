@@ -1,5 +1,6 @@
 import Carousel from "../components/Carousel";
 import { useTranslation } from "react-i18next"; 
+import Container from "./shared/container";
 
 const Projects = () => {
 
@@ -7,6 +8,7 @@ const Projects = () => {
 
   return ( 
     <section data-aos="fade-up" data-aos-duration="3000" id="projects">
+      <Container>
     <div>
       <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
         My Recent Work
@@ -18,6 +20,7 @@ const Projects = () => {
     <div className="flex flex-col items-center py-10 ">
       <Carousel />
     </div>
+    </Container>
   </section>
    );
 }

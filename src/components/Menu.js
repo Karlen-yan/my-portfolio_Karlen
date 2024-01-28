@@ -38,7 +38,7 @@ const Menu = () => {
   }, [])
 
   return (
-    <div className='fixed bottom-10 left-1/2 lg:top-1/2 lg:right-5 lg:left-auto transform -translate-x-1/2 -translate-y-1/2 z-50'>
+    <div className='fixed bottom-0 left-1/2 lg:top-1/2 lg:right-5 lg:left-auto transform -translate-x-1/2 -translate-y-1/2 z-50'>
       <div className='flex justify-center items-center p-2 sm:flex-row lg:flex-col rounded-full bg-gray-600 bg-opacity-60'>
         <a
           href='#home'

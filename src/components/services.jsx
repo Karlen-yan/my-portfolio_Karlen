@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import IconWeb from "../images/web_icon.png";
 import IconBack from "../images/icon_back.png";
 import IconDb from "../images/db.png";
+import Container from './shared/container';
 
 const Services = () => {
   const { t } = useTranslation()
@@ -13,6 +14,7 @@ const Services = () => {
 
   return (
     <section data-aos='fade-up' data-aos-duration='3000' id='services'>
+      <Container>
       <div className='text-center mb-12  flex flex-col items-center  min-h-screen'>
         <div>
           <h1 className='text-center text-gray-800  md:text-1x1 dark:text-white pt-24'>
@@ -82,6 +84,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      </Container>
     </section>
   )
 }

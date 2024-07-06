@@ -12,7 +12,7 @@ export default function Providers({ children }) {
   }, []);
 
   useEffect(() => {
-    AOS.init(); // Inicializa AOS
+    AOS.init(); 
   }, []);
 
   if (!mounted) {

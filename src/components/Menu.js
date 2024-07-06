@@ -43,7 +43,7 @@ const Menu = () => {
         <a
           href='#home'
           className={`text-gray-100   hover:text-white p-2 ${
-            activeSection === 'home' ? 'bg-teal-500 rounded-full' : ''
+            activeSection === 'home' ? ' bg-teal-500  rounded-full' : ''
           }`}
           onClick={() => scrollToSection('home')}
         >

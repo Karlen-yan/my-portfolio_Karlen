@@ -22,6 +22,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 import { useTranslation } from 'react-i18next'
+import Gandz from '../images/iglecia.png'
+import reformaConstruction from '../images/reforma-construction.png'
 import HayPoli from '../images/hay-poli.png'
 import Construction from '../images/app_construccion.png'
 import ProjectTelesfor from '../images/projecte-telesfor.png'
@@ -31,6 +33,8 @@ import LaravelReact from '../images/laravel-react.png'
 import SirunikThemeWordpress from '../images/SirunikThemeWordpress.png'
 import Car3DModel from '../images/car.png'
 const images = [
+  Gandz,
+  reformaConstruction,
   HayPoli,
   Construction,
   ProjectTelesfor,
@@ -43,6 +47,22 @@ const images = [
 
 const Carousel = () => {
   const projects = [
+    {
+      image: Gandz,
+      githubLink: 'https://github.com/Karlen-yan/iglesia-gandz',
+      onlineLink: '',
+      technologies: [faJs,faReact, faCss3Alt, faNode],
+      description:
+        "This ongoing project involves the creation of a multilingual website for a church. The site is designed to be accessible in multiple languages, providing information about the church's services, events, and activities"
+    },
+    {
+      image: reformaConstruction,
+      githubLink: 'https://github.com/Karlen-yan/reforma-mantenimiento',
+      onlineLink: '',
+      technologies: [faJs,faReact, faCss3Alt, faNode],
+      description:
+        'A website for air conditioning installation services, featuring service presentation, completed projects, and an interactive contact form.'
+    },
     {
       image: HayPoli,
       githubLink: 'https://github.com/Karlen-yan/hay-poli',
@@ -84,13 +104,13 @@ const Carousel = () => {
     },
     {
       image: Cobeer,
-      technologies: [faPhp, faCss3Alt, faJs]
+      technologies: [faPhp,faJs, faCss3Alt]
       // githubLink: '',
       // description:"",
     },
     {
       image: CvKarlen,
-      technologies: [faReact, faJs, faCss3Alt],
+      technologies: [faJs,faReact, faCss3Alt],
       githubLink: 'https://github.com/Karlen-yan/KarlenCV__',
       description:
         'Digital CV Project: Created with the purpose of having an interactive and dynamic online curriculum vitae. This project allows users to download their CV as it appears on the screen. Additionally, all pages are available in both English and Spanish to reach a broader audience. The main objective is to provide a platform where the description and personal information can be completed. Through this project, the aim is also to practice new technologies, such as Next.js in this case, to gain knowledge in modern web development.'

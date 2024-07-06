@@ -13,7 +13,7 @@ const About = () => {
       <Container>
 
     
-    <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-24">
+    <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-12">
       {t("getToKnow")}
     </h1>
     <h1 className="text-center text-teal-500 py-1 md:text-4xl dark:text-teal-500 pb-12">

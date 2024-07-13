@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
        <Head>
-        <link rel="icon" href="/portafolio.png" />
-      </Head>
+       <link rel="icon" href="/maletin.png" />
+       </Head>
       <body >
         <Providers>
           <ThemeSwitcher />

@@ -176,7 +176,7 @@ const Carousel = () => {
                     />
                   ))}
                 </div>
-                <div className='flex flex-col items-center pt-8 pb-8'>
+                <div className='flex flex-col items-center pt-8 pb-8 m-12'>
                   <Image
                     src={project.image}
                     alt='Imagenes de Proyectos Creados'

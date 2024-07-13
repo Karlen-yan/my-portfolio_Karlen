@@ -20,13 +20,13 @@ const About = () => {
       {t("aboutMe")}
     </h1>
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="bg-gradient-to-b from-teal-500 rounded-md w-80 h-96">
+      <div className="bg-gradient-to-b from-teal-500 rounded-md w-76 h-80 md:w-96 md:h-96 md:m-12">
         <div className="rounded-md space-x-0.5 rotate-on-hover overflow-hidden">
           <Image
             src={ImgKarlenAbout}
             alt="My foto"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
           />
         </div>
       </div>

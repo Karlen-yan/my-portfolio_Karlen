@@ -1,3 +1,4 @@
+import CustomCursor from "@/components/shared/cursor";
 import ThemeSwitcher from "./ThemeSwitcher";
 import "./globals.css";
 import Providers from "./providers";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body >
         <Providers>
           <ThemeSwitcher />
+          <CustomCursor />
           {children}
         </Providers>
       </body>

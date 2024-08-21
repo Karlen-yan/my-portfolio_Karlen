@@ -165,7 +165,7 @@ const Carousel = () => {
           />
         ))}
       </div>
-      <div className='relative w-full max-w-4xl overflow-hidden bg-gradient-to-b from-teal-500 '>
+      <div className='relative w-full max-w-4xl overflow-hidden bg-gradient-to-b from-teal-500  rounded-xl p-6'>
         <div
           className='w-full transition-transform duration-500 ease-in-out '
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}

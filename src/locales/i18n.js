@@ -42,7 +42,7 @@ i18n.use(initReactI18next).init({
           text1: 'I use technologies like',
           span1: 'JavaScript',
           text2: 'and frameworks like',
-          span2: 'VueJS and ReactJS',
+          span2: 'ReactJS (NEXT JS) and VueJS ',
           text3: 'to develop',
           span3: 'interactive and dynamic web applications',
           rest: 'that provide an exceptional user experience.'
@@ -121,7 +121,7 @@ i18n.use(initReactI18next).init({
           text1: 'Utilizo tecnologías como',
           span1: 'JavaScript',
           text2: 'y frameworks como',
-          span2: 'VueJS y ReactJS',
+          span2: 'ReactJS (NEXT JS) y VueJS ',
           text3: 'para desarrollar',
           span3: 'aplicaciones web interactivas y dinámicas',
           rest: 'que brindan una experiencia excepcional al usuario.'

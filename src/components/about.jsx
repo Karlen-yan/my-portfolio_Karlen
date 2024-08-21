@@ -46,7 +46,7 @@ const About = () => {
             <h2 className="text-gray-900 dark:text-white text-lg mt-2">
               {t("clients")}
             </h2>
-            <p className="text-teal-900 dark:text-teal-500 text-sm">
+            <p className="text-teal-900 dark:text-teal-500 text-sm ">
               {t("clientsCompleted")}
             </p>
           </div>

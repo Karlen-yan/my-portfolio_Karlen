@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+  cursor: none;
+}
 /* About me img  */
 .rotate-on-hover {
   transform: rotate(5deg);
@@ -30,4 +34,33 @@
 .group:hover .tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+
+/* cursor  */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 1px 1px 8px white;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
 }

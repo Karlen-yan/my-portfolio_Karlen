@@ -9,7 +9,7 @@ const Autor = () => {
 
   return (
     <section
-      className='mb-12  flex flex-col items-center  min-h-screen '
+      className='mb-12  flex flex-col items-center  min-h-screen  z-50'
       id='home'
     >
       <Container>

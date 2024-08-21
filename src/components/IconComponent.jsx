@@ -54,7 +54,7 @@ const IconComponent = ({ name }) => {
   return (
     <FontAwesomeIcon
       icon={icons[name]}
-      className={`text-2xl ${iconColors[name]} hover:text-teal-500`}
+      className={`text-2xl ${iconColors[name]} hover:text-teal-500 cursor-none`}
       style={{ width: 30 }}
     />
   );

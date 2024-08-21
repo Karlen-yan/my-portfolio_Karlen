@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-       
+      cursor: {
+        'none': 'none',
       },
       fontFamily:{
         burtons:"burtons"

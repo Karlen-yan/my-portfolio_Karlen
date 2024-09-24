@@ -3,7 +3,7 @@
 import Menu from "../components/Menu";
 import Autor from "@/components/autor";
 import About from "@/components/about";
-import Services from "@/components/services";
+// import Services from "@/components/services";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Skills from "@/components/skills";

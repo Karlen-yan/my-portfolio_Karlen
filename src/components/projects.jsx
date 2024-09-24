@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"; 
 import Container from "./shared/container";
-import ProjectCards from "./CardsProjects";
+import ProjectCards from "./CardsProjects.jsx";
 
 const Projects = () => {
 

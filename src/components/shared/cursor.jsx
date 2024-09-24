@@ -6,8 +6,7 @@ const CustomCursor = () => {
   useEffect(() => {
     const cursor = document.querySelector('.cursor')
     const links = document.querySelectorAll('a')
-    const buttons = document.querySelectorAll('button')
-    const cursorBig = document.querySelectorAll('.cursor-big')
+    const cursorBig = document.querySelector('.cursor-big')
     const lgBreakpoint = 1024
     if (window.innerWidth < lgBreakpoint) {
       return
@@ -33,10 +32,7 @@ const CustomCursor = () => {
       link.addEventListener('mouseenter', onMouseEnterLink)
       link.addEventListener('mouseleave', onMouseLeaveLink)
     })
-    buttons.forEach(button => {
-      button.addEventListener('mouseenter', onMouseEnterLink)
-      button.addEventListener('mouseleave', onMouseLeaveLink)
-    })
+  
     cursorBig.forEach(image => {
       image.addEventListener('mouseenter', onMouseEnterLink)
       image.addEventListener('mouseleave', onMouseLeaveLink)

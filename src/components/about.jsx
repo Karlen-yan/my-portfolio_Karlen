@@ -9,14 +9,14 @@ const About = () => {
   const { t } = useTranslation();
   return ( 
 
-    <section data-aos="fade-up" data-aos-duration="3000" id="about">
+    <section data-aos="fade-up" data-aos-duration="3000" id="about" className='items-center min-h-screen md:pt-12'>
       <Container>
 
     
-    <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white pt-12">
+    <h1 className="text-center text-gray-800  md:text-1x1 dark:text-white">
       {t("getToKnow")}
     </h1>
-    <h1 className="text-center text-teal-500 py-1 md:text-4xl dark:text-teal-500 pb-12">
+    <h1 className="text-center text-teal-500 py-1 md:text-4xl dark:text-teal-500 md:pb-12">
       {t("aboutMe")}
     </h1>
     <div className="grid grid-cols-1 md:grid-cols-2">

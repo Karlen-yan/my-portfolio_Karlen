@@ -64,6 +64,9 @@ i18n.use(initReactI18next).init({
           text4:
             'to manage and store data effectively, ensuring optimal performance.'
         },
+        skills: 'Skills',
+        myRecentWork: 'My Work',
+        portofolio: 'Portofolio',
         bouttonCarouselPrevious: 'Previous',
         bouttonCarouselNext: ' Next',
 
@@ -143,6 +146,9 @@ i18n.use(initReactI18next).init({
           text4:
             'para gestionar y almacenar datos de manera efectiva, asegurando un rendimiento óptimo.'
         },
+        skills: 'Habilidades',
+        myRecentWork: 'Mis trabajos',
+        portofolio: 'Portafolio',
         bouttonCarouselPrevious: 'Anterior',
         bouttonCarouselNext: 'Siguiente',
 

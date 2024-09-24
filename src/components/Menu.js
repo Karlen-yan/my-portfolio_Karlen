@@ -16,7 +16,8 @@ const Menu = () => {
       const sectionPositions = {
         home: document.getElementById('home').offsetTop,
         about: document.getElementById('about').offsetTop,
-        services: document.getElementById('services').offsetTop,
+        // services: document.getElementById('services').offsetTop,
+        services: document.getElementById('skills').offsetTop,
         projects: document.getElementById('projects').offsetTop,
         contact: document.getElementById('contact').offsetTop
       }
@@ -60,12 +61,21 @@ const Menu = () => {
           <IconComponent name='menuUser' className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12"/>
         </a>
 
-        <a
+        {/* <a
           href='#services'
           className={`text-gray-100 hover:text-white p-2 ${
             activeSection === 'services' ? 'bg-teal-500 rounded-full' : ''
           }`}
           onClick={() => scrollToSection('services')}
+        >
+          <IconComponent name='menuWindowMaximize' className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12" />
+        </a> */}
+        <a
+          href='#skills'
+          className={`text-gray-100 hover:text-white p-2 ${
+            activeSection === 'skills' ? 'bg-teal-500 rounded-full' : ''
+          }`}
+          onClick={() => scrollToSection('skills')}
         >
           <IconComponent name='menuWindowMaximize' className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12" />
         </a>

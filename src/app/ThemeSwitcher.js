@@ -34,7 +34,7 @@ const ThemeSwitcher = () => {
         <h3>
           <Language />
         </h3>
-        <ul className='flex flex-row items-center justify-between '>
+        <ul className='flex flex-row items-center justify-between cursor-big '>
           {theme === 'light' && (
             <button onClick={() => setTheme('dark')}>
               <IconComponent name={'moon'} />

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/legacy/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faGlobe,
+  faExternalLinkAlt,
   faInfo,
   faCircle,
   faChevronLeft,
@@ -208,19 +208,7 @@ const Carousel = () => {
                         />
                       </a>
                     )}
-                    {project.onlineLink && (
-                      <a
-                        href={project.onlineLink}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        <FontAwesomeIcon
-                          icon={faGlobe}
-                          size='xl'
-                          className='mx-6 hover:text-teal-500'
-                        />
-                      </a>
-                    )}
+
                     {project.description && (
                       <div className='relative  inline-block group'>
                         <FontAwesomeIcon
@@ -232,6 +220,20 @@ const Carousel = () => {
                           {project.description}
                         </div>
                       </div>
+                    )}
+
+                    {project.onlineLink && (
+                      <a
+                        href={project.onlineLink}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <FontAwesomeIcon
+                          icon={faExternalLinkAlt}
+                          size='xl'
+                          className='mx-6 hover:text-teal-500'
+                        />
+                      </a>
                     )}
                   </div>
                 </div>

@@ -59,7 +59,7 @@ body{
   -o-border-radius: 50%;
   box-shadow: 1px 1px 8px white;
 }
-a{
+a,button{
   color: inherit;
   text-decoration: none;
   cursor: none;

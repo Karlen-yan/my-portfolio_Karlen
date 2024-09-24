@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
     <div className="fixed top-36 right-2 flex flex-col space-y-2 z-10 lg:flex-row lg:space-y-0 lg:right-10 lg:top-2 lg:justify-center lg:items-center lg:transform ">
       <button
         onClick={() => changeLanguage('en')}
-        className={`px-2 ml-2 py-1 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 bg-opacity-60 ${
+        className={`px-2 ml-2 py-1 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 bg-opacity-60 cursor-none ${
           isCurrentLanguage("en") ? "bg-teal-500" : ""
         }`}
       >

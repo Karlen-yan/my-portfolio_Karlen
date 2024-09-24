@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/legacy/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faExternalLinkAlt,
-  faInfo,
-  faCircle,
-  faChevronLeft,
-  faChevronRight
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 import {  faGithub } from '@fortawesome/free-brands-svg-icons'
 

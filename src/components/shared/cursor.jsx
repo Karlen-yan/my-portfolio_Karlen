@@ -3,10 +3,8 @@ import { useEffect, useState } from 'react'
 import gsap from 'gsap'
 
 const CustomCursor = () => {
-  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
       setIsClient(true) 
       const cursor = document.querySelector('.cursor')
       const links = document.querySelectorAll('a')
@@ -55,10 +53,9 @@ const CustomCursor = () => {
           image.removeEventListener('mouseleave', onMouseLeaveLink)
         })
       }
-    }
   }, [])
 
-  return isClient && window.innerWidth > 1024 ? <div className='cursor' /> : null
+  return   window.innerWidth > 1024 ? <div className='cursor' /> : null
 }
 
 export default CustomCursor

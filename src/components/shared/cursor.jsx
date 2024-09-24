@@ -5,7 +5,7 @@ import gsap from 'gsap'
 const CustomCursor = () => {
 
   useEffect(() => {
-      setIsClient(true) 
+       
       const cursor = document.querySelector('.cursor')
       const links = document.querySelectorAll('a')
       const cursorBig = document.querySelectorAll('.cursor-big')

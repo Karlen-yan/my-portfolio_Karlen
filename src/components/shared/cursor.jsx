@@ -7,8 +7,7 @@ const CustomCursor = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setIsClient(true) // Verificación de si estamos en el cliente
-
+      setIsClient(true) 
       const cursor = document.querySelector('.cursor')
       const links = document.querySelectorAll('a')
       const cursorBig = document.querySelectorAll('.cursor-big')
@@ -59,8 +58,7 @@ const CustomCursor = () => {
     }
   }, [])
 
-  // Solo renderiza el cursor en el cliente y si la resolución es mayor a 1024px
-  return isClient && window.innerWidth >= 1024 ? <div className='cursor' /> : null
+  return isClient && window.innerWidth > 1024 ? <div className='cursor' /> : null
 }
 
 export default CustomCursor

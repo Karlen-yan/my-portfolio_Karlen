@@ -14,12 +14,12 @@ const Menu = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sectionPositions = {
-        home: document.getElementById('home').offsetTop,
-        about: document.getElementById('about').offsetTop,
-        // services: document.getElementById('services').offsetTop,
-        services: document.getElementById('skills').offsetTop,
-        projects: document.getElementById('projects').offsetTop,
-        contact: document.getElementById('contact').offsetTop
+        home: document.getElementById('home')?.offsetTop || 0,
+        about: document.getElementById('about')?.offsetTop || 0,
+        // services: document.getElementById('services')?.offsetTop || 0,
+        skills: document.getElementById('skills')?.offsetTop || 0,
+        projects: document.getElementById('projects')?.offsetTop || 0,
+        contact: document.getElementById('contact')?.offsetTop || 0
       }
 
       const currentPosition = window.scrollY

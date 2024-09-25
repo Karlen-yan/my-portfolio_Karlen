@@ -59,7 +59,7 @@ const CustomCursor = () => {
       }
   }, [])
 
-  return  typeof window !== 'undefined'  && window.innerWidth > 900 ? <div className='cursor' /> : null
+  return  window.innerWidth > 900 ? <div className='cursor' /> : null
 }
 
 export default CustomCursor

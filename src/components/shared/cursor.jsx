@@ -15,6 +15,9 @@ const CustomCursor = () => {
       if (window.innerWidth < lgBreakpoint) {
         return
       }
+      if (typeof window === 'undefined') {
+        return 
+      }
 
       const onMouseMove = (event) => {
         const { clientX, clientY } = event

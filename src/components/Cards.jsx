@@ -74,8 +74,7 @@ const projects = [
       TailwindIcon,
       FigmaIcon,
       node,
-      mongodb,
-      mysql
+      mongodb
     ],
     description:
       "This ongoing project involves the creation of a multilingual website for a church. The site is designed to be accessible in multiple languages, providing information about the church's services, events, and activities"

@@ -1,10 +1,8 @@
 import React from 'react'
 import Image from 'next/legacy/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faExternalLinkAlt
-} from '@fortawesome/free-solid-svg-icons'
-import {  faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import { useTranslation } from 'react-i18next'
 import Gandz from '../images/iglecia.png'
@@ -18,6 +16,7 @@ import LaravelReact from '../images/laravel-react.png'
 import SirunikThemeWordpress from '../images/SirunikThemeWordpress.png'
 import Car3DModel from '../images/car.png'
 import webMasterKH from '../images/webMasterKH.png'
+import pizza_menu from '../images/pizza_menu.png'
 
 // icons
 import faJs from '../images/icons/javascript.svg'
@@ -54,6 +53,14 @@ const images = [
 ]
 
 const projects = [
+  {
+    image: pizza_menu,
+    githubLink: 'https://github.com/Karlen-yan/pizza_menu',
+    onlineLink: 'https://fuego-lena.vercel.app/es',
+    technologies: [faJs, faReact, nextJs, faCss3Alt, TailwindIcon],
+    description:
+      'A pizza menu website with a modern design, featuring a menu, cart, and checkout system. The project is built using React.js and Next.js, with Tailwind CSS for styling.'
+  },
   {
     image: webMasterKH,
     githubLink: 'https://github.com/Karlen-yan/my-portfolio_Karlen',
@@ -159,15 +166,13 @@ const ProjectCards = () => {
           key={index}
           className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg'
         >
-        
-  
           <Image
             src={project.image}
             alt={`Imagen del proyecto ${index}`}
             className='rounded-lg mt-4'
             style={{ width: '100%', height: 'auto' }}
           />
-               <div className='flex  justify-center gap-4 text-gray-900 dark:text-gray-100'>
+          <div className='flex  justify-center gap-4 text-gray-900 dark:text-gray-100'>
             {project.technologies.map((techIcon, techIndex) => (
               <Image
                 key={techIndex}
@@ -209,7 +214,6 @@ const ProjectCards = () => {
                 />
               </a>
             )}
-         
           </div>
         </div>
       ))}

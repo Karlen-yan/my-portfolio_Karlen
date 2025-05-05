@@ -5,6 +5,7 @@ import ImgKarlen from '../images/karlen.png'
 import Container from './shared/container'
 
 const Autor = () => {
+  
   const { t } = useTranslation()
 
   return (
@@ -54,4 +55,4 @@ const Autor = () => {
   )
 }
 
-export default Autor
+export default Autor;
